@@ -1,15 +1,12 @@
-const questions = require('./questions')
+const questionsDao = require('../daos/questions.dao.server')
 
-findAllQuestions = () => questions
+
+
+findAllQuestions = () => questionsDao.findAllQuestions()
 findQuestionById = (qid) =>
-    questions.find(question =>
-        question._id === qid)
-findQuestionsForQuiz = (qzid) =>
-    questions.filter(question =>
-        question.quizId === qzid
-    )
-module.exports = {
-    findAllQuestions,
-    findQuestionById,
-    findQuestionsForQuiz
-}
+     questionsDao.findQuestionById(qid)
+
+findQuestionsForQuiz = (qid) => questionsDao.findQuestionsForQuiz(qid)
+module.exports = { findAllQuestions, findQuestionById, findQuestionsForQuiz }
+
+

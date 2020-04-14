@@ -12,7 +12,7 @@ const findUserByCredentials =
         return userModel.findOne(
             {
                 username: username,
-                password :password
+                password: password
             })
     }
 
