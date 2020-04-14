@@ -12,7 +12,7 @@ mongoose.connect('mongodb://heroku_8c17h40k:sb784thvdhjbsm41v8t8k9avnu@ds013414.
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin",
-        "http://localhost:4200");
+        "https://wbdv-sp20-hgao-client-angular.herokuapp.com");
     res.header("Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept");
     res.header("Access-Control-Allow-Methods",
